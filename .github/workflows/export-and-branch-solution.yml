@@ -32,6 +32,13 @@ jobs:
         solution-name: TestSolution2
         solution-output-file: out/exported/TestSolution3.zip
 
+    - name: Upload exported solution
+      uses: actions/upload-artifact@v3
+      with:
+        name: exported-solution
+        path: out/exported/TestSolution3.zip
+
+
    
 
    
