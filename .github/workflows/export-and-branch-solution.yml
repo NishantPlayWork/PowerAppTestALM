@@ -16,6 +16,9 @@ jobs:
       with:
         lfs: true
 
+    - name: Create export directory
+      run: mkdir -p out/exported
+
     - name: who-am-i action
       uses: microsoft/powerplatform-actions/who-am-i@v0
       with:
@@ -31,6 +34,9 @@ jobs:
         password-secret: ${{ secrets.password }}
         solution-name: TestSolution2
         solution-output-file: out/exported/TestSolution3.zip
+
+    - name: List exported files
+      run: ls -R out/exported
 
     - name: Upload exported solution
       uses: actions/upload-artifact@v3
