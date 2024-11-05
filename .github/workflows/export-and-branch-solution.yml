@@ -58,7 +58,8 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: exported-solution
-        path: out/exported/TestSolution3.zip
+        path: out/exported/TestSolution2.zip
+        # temp change name to TestSolution2 from 3 
 
     - name: unpack-solution action
       uses: microsoft/powerplatform-actions/unpack-solution@v0
